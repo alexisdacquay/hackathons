@@ -56,22 +56,6 @@ coverage/
 tmp/
 temp/
 
-# Runtime audit log + its checkpoint/anchor side files — generated WHEN THE APP
-# RUNS, not source. The real records are never committed (they'd be demo/runtime
-# artifacts in the repo); tests use throwaway logs and demo runs regenerate them
-# locally. The glob also covers audit_log.csv.checkpoint / .anchor / .tmp.
-audit_log.csv*
-
-# Runtime CocoShaMem store — memories WRITTEN at run time. The committed copy is the
-# seed (cocoshamem.seed.json); the live store cocoshamem.json is regenerated from it
-# and appended to at runtime, so it is never committed (no runtime artifact in the repo).
-cocoshamem.json
-cocoshamem.json.tmp
-
-# Pipeline activity feed (JSONL) — written at run time for the GUI to graph; a
-# runtime artifact like the store/audit log above, never committed.
-events.jsonl
-
 # ─────────────────────────────────────────────────────────────
 # Editor & OS noise
 # ─────────────────────────────────────────────────────────────
